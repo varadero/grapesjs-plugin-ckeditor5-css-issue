@@ -1,0 +1,23 @@
+{
+  "name": "grapesjs-plugin-ckeditor5-css-issue",
+  "version": "1.0.0",
+  "description": "Repository for demonstrating CSS issue with ckeditor5 grapesjs plugin",
+  "main": "ckeditor.js",
+  "dependencies": {
+    "grapesjs-plugin-ckeditor5": "^0.0.33"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varadero/grapesjs-plugin-ckeditor5-css-issue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varadero/grapesjs-plugin-ckeditor5-css-issue/issues"
+  },
+  "homepage": "https://github.com/varadero/grapesjs-plugin-ckeditor5-css-issue#readme"
+}
