@@ -48,7 +48,14 @@ strong {
 }
 ```
 
-and there is text in grapesjs editor inside `<strong>....</strong>`, the text inside grapesjs editor appears red. When the user double-clicks on the text to edit it in the ckeditor5 popup, the text is not red. The reason is that grapesjs content is inside `<iframe>` and ckeditor5 plugin shows ckeditor5 popup as part of the parent document. The `.css` file is applied only to the grapesjs `<iframe>`. In order to have the same styling in the ckeditor5 popup we have to apply the same `.css` to the parent document. But this is dangerous because it can interfere with the styles of the parent document application, which is not acceptable. We also can't force the users to make the `.css` in such a way that is can be applied to both `<iframe>` and to the parent document (where the ckeditor5 plugin popup is created) without overwriting parent document styling.
+and there is text in grapesjs editor inside `<strong>....</strong>`, the text inside grapesjs editor appears red. When the user double-clicks on the text to edit it in the ckeditor5 popup, the text is not red. 
+
+This is how it looks like in grapesjs editor and in the ckeditor5 plugin popup:
+
+![image](https://user-images.githubusercontent.com/7610713/180967281-ead7287e-74c8-4733-b392-92daab411297.png)
+
+
+The reason is that grapesjs content is inside `<iframe>` and ckeditor5 plugin shows ckeditor5 popup as part of the parent document. The `.css` file is applied only to the grapesjs `<iframe>`. In order to have the same styling in the ckeditor5 popup we have to apply the same `.css` to the parent document. But this is dangerous because it can interfere with the styles of the parent document application, which is not acceptable. We also can't force the users to make the `.css` in such a way that is can be applied to both `<iframe>` and to the parent document (where the ckeditor5 plugin popup is created) without overwriting parent document styling.
 
 What we think can overcome this problem naturally is to not use ckeditor5 popup but make it part of the grapesjs `<iframe>` so it changes the content inside the `<iframe>` - the built-in grapesjs RTE editor does this - when the user double-clicks on a text inside grapesjs canvas, the text becomes editable so the user changes the text inside the `<iframe>` and there is no need to do anything additional for the stylings to be applied.
 
